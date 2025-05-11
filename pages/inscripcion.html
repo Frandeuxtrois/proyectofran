@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Formulario</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+                <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="campeones.html">Campeones</a></li>
+                <li><a href="inscripcion.html">Inscribite</a></li>
+                <li><a href="reglas.html">Reglas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="entradas.html">Entradas</a></li>
+                </ul>
+        </nav>
+        <a href="../index.html"><img src="../images/logoindex.png" alt="Logo página" class="logo"></a>
+    </header>
+    
+    <!-- GRID SIMPLE-->
+    <section class="inscripcion">
+        <div class="formulario">
+            <h1 class="h1paginas">Inscribite</h1>  
+        <form action="/submit" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="Nombre" id="nombre">
+            
+            <label for= "apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido">
+
+            <label for= "automovilFormulario">Marca y modelo:</label>
+            <input type="text" name="auto" id="automovil"> 
+
+            <label for="clase">Clase:</label>
+            <select>
+              <option value="1">Clase 1</option>
+              <option value="2">Clase 2</option>
+              <option value="3">Clase 3</option>
+              <option value="4">Clase 4</option>
+              <option value="5">Clase 5</option>
+              <option value="6">Clase 6</option>
+            </select>
+
+            <label for="mensajeAdicional">Mensaje adicional:</label>
+            <textarea name="mensajeAdicional" id="mensaje">Ingrese su mensaje</textarea>
+            <input type="submit">
+            </form>
+        </div>
+
+        <div class="textoFormulario">
+        <h2>Requisitos de inscripción</h2>
+            <ul>
+                <li>El piloto debe ser mayor de 18 años</li>
+                <li>El vehículo debe contar con seguro mínimo contra terceros.</li>
+                <li>Se exige la utilización de casco y cinturón de seguridad.</li>
+                <li>No se permiten vehículos que presenten pérdidas de fluidos o desperfectos mecánicos visibles.</li>
+                <li>La inscripción no garantiza participación: los cupos son limitados y sujetos a revisión técnica previa.</li>
+                <li>Es obligatorio firmar el deslinde de responsabilidad antes de ingresar a pista.</li>
+
+            </ul>
+            <h2>Datos necesarios</h2>
+            <ol>
+                <li>Cedula Verde/Azul.</li>
+                <li>Fotocopia de licencia de conducir.</li>
+                <li>Seguro del vehículo vigente</li>
+                <li>VTV al día.</li>
+                <li>Se exige la utilización de casco y cinturón de seguridad.</li>
+            </ol>
+        </div>
+    <!-- GRID SIMPLE-->
+    </section>
+    <footer>
+        <!-- nuestras redes--> 
+        <p class="negrita">Nuestras Redes</p>
+        <div class="imagefooter">
+        <a href="https://facebook.com" target="_blank"><img src="../images/facebook.png" alt="Nuestro Facebook"></a>
+        <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="../images/whatsapp.png" alt="Nuestro WhatsApp"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="../images/youtube.png" alt="Nuestro YouTube"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../images/instagram.png" alt="Nuestro Instagram"></a>
+        </div>
+        <p>Copyright 2025</p>
+    </footer>
+</body>
+</html>

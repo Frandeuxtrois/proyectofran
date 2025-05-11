@@ -1,0 +1,373 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: end;
+    background-color: #1C1C1C;
+    background-image: url(../images/header-background.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+ 
+}
+
+.menu-desplegable {
+
+}
+.logo-container {
+    display: flex;
+    display: inline-block; /* Se ajusta al tamaño de su contenido */
+    margin-left: 120px;
+ }
+
+ .logo {
+    display: block; /* Elimina espacios indeseados debajo de la imagen */
+    max-width: 200px; /* Ajustá el tamaño según tu imagen */
+    height: auto;
+ }
+
+header nav a{
+    display: flex;
+    color: #D72638;
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 20px;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: end;
+    align-content: end;
+    width: 100%;
+    font-size: medium;
+    gap: 20px;
+    padding: 0.5%;
+}
+
+body {
+    font-family: 'lato';
+    background-size:cover;
+    height: 100%;
+}
+
+body h1, h2 {
+    color: #D72638;
+
+}
+
+.primer-parrafo {
+    display: flex;
+    align-items:top;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 1.5%; 
+    padding: 1%;
+    background-color: #3A3A3A;
+    gap: 1.5%;
+    padding: 1%;
+    margin: 2%;
+    background-size:contain;
+    border-radius: 20px;
+}
+
+
+.primer-parrafo div {
+    width: 100%;
+}
+
+
+.primer-parrafo p {
+    align-items: center;
+    font-weight: bold;
+    color:#1C1C1C;
+}
+
+.segundo-parrafo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5%;
+    padding: 1%;
+    margin: 2%;
+    font-weight: bold;
+    text-align: end;
+    border-radius: 20px;
+    background-color: #3A3A3A;
+    background-size:contain;
+}
+
+.segundo-parrafo p {
+    color:#1C1C1C;
+}
+.segundo-parrafo img {
+    display: flex;
+    height: 100%;
+    margin-top: 0.5%;
+}
+
+footer {
+    display: flex;
+    background-color: #1C1C1C;
+    height: 18;
+    padding: 0.2%;
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+footer p{
+    display: flex;
+    color: #3A3A3A;
+    text-align: center;
+    font-size: small;
+    margin-bottom: 5px;
+    justify-content: center;
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.6);
+}
+
+footer a {
+    display: flex;
+    flex-direction: row;
+    width: 3.4%;
+    justify-content: center;
+
+}
+
+.sponsors {
+    display: flex;
+    width: 10vh;
+    height: 5vh;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10vh;
+    border: 2px solid red;
+}
+
+.sponsors img {
+
+border: 2px solid white;
+    width: 100%;
+}
+
+.grid-footer img {
+    display:block;            /* ✅ elimina espacios extra debajo de la imagen */
+    height: 6vh;  
+    gap: 3px;
+    object-fit:contain;         /* ✅ mantiene proporción recortando si hace falta */
+    border-radius: 8px;
+    margin-bottom: 150px;
+}
+
+.mapafooter {
+    display: flex;
+    position: absolute;
+    margin-top: 0.8vh;
+
+}
+
+.imagefooter {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    gap: 10px;
+    margin-top: 5vh;
+    flex-direction: row;
+    justify-content: end;
+
+}
+
+
+
+.paginas-principal {
+    text-align: center;
+}
+
+.negrita {
+    display: flex;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: flex-end;
+    margin: 1vh;
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.6);
+    
+}
+
+.grid-container1 {
+    display: grid;
+    border: 1px solid red;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "foto1 foto2 foto3"
+    "foto4 foto5 foto6";
+    gap: 10px;
+    margin: 2%;
+}
+
+.grid-container1 img {
+    display: block;            /* ✅ elimina espacios extra debajo de la imagen */
+    width: 100%;               /* ✅ que llene completamente la celda */
+    height: 50vh;              /* ✅ que ocupe todo el alto de la celda */
+    object-fit: cover;         /* ✅ mantiene proporción recortando si hace falta */
+    border-radius: 8px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "hola1 hola2";
+    justify-content: center;
+    gap: 10px;
+    margin: 2%;
+}
+
+.h1paginas {
+    margin: 0.5%;
+    color: #D72638;
+}
+
+/* pagina inscripcion.. estara bien hacer los styles.css sobre el mismo css que el index? */
+
+.inscripcion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "formulario textoFormulario";
+    gap: 10px;
+    margin: 30px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #3A3A3A;
+    align-items: center;
+    width: 80vh;
+    height: 80vh;
+    border-radius: 5px;
+    gap: 10px;
+    padding: 30px;
+    margin-left: 40px;
+}
+
+
+
+/* estara bien hacer el form aparte? si ya esta dividido por un /div */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    color: #F5F5F5;
+    gap: 10px;
+}
+
+.textoFormulario {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    color: #F5F5F5;
+    width: 100vh;
+    height: 100vh;
+    text-shadow: 20px black;
+    padding: 5% 0% 0% 0%;
+    background-color: #3A3A3A;
+    gap: 30px;
+}
+
+.textoFormulario h2 {
+    color: #D72638;
+}
+
+.textoFormulario ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 60%;
+}
+
+.textoFormulario ol {
+display: flex;
+flex-direction: column;
+justify-content: end;
+}
+
+
+@media (max-width: 600px) { /* EL MENU NAV TIENE QUE ESTAR EN BOOTSTRAP (O EN LO Q SEA) PERO SI O SI DESPLEGABLE */
+    
+.logo {
+    width: 20%;
+}
+header {
+    padding: 6% 0;
+    width: 100%;
+}
+
+header a {
+    padding: 5% 0;
+    justify-content: space-between;
+    width: 100%;
+}
+header nav {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 13%;
+}
+
+
+header ul {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+main {
+margin: 5% 0% 5% 0%;
+
+}
+
+.primer-parrafo, .segundo-parrafo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+}
+
+.primer-parrafo iframe {
+    width: 100%;
+    height: 50vh;
+
+}
+
+.grillas {
+    grid-template-areas: 
+    "f0to1"
+    "f0to2"
+    "f0to3"
+    "f0to4"
+    "f0to5"
+    "f0to6";
+    grid-template-columns: 1fr;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+}

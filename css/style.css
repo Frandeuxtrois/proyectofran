@@ -325,67 +325,247 @@ justify-content: end;
 
 /* HTML CONTACTOS */
 
-@media (max-width: 600px) { /* EL MENU NAV TIENE QUE ESTAR EN BOOTSTRAP (O EN LO Q SEA) PERO SI O SI DESPLEGABLE */
+/* --- TABLETS --- */
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 1rem 0;
+    }
+
+    .menu-desplegable {
+        align-self: flex-end;
+        margin-right: 10px;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        background-color: #1C1C1C;
+        padding: 0;
+        margin: 0;
+        gap: 50px;
+    }
     
-.logo {
-    width: 20%;
+    header nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    header nav a {
+        display: flex;
+        gap: 2vh;
+        font-size: 0.9rem;
+    }
+
+    .primer-parrafo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .primer-parrafo iframe {
+        height: 200px; /* para que no quede muy alto */
+        margin-bottom: 10px;
+    }
+
+    .primer-parrafo div {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .segundo-parrafo {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .segundo-parrafo img {
+        height: auto;
+        max-width: 90%;
+        margin-top: 10px;
+    }
+
+    .grid-container1 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "foto1 foto2"
+            "foto1 foto3"
+            "foto4 foto5";
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .foto2 img, .foto3 img, .foto4 img, .foto5 img {
+        height: 150px;
+    }
+
+    h3 {
+        width: 40%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .mapafooter {
+        width: 50%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .sponsors {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        border: 1px solid red;
+    }
+
+    .sponsors img {
+        height: 5vh;
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+    }
+    .redes img {
+        display: flex;
+        height: 5vh;
+        border: 1px solid red;
+        gap: 2px;
+        flex-direction: row;
+    }
 }
-header {
-    padding: 6% 0;
-    width: 100%;
-}
 
-header a {
-    padding: 5% 0;
-    justify-content: space-between;
-    width: 100%;
-}
-header nav {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 13%;
-}
+/* --- CELULARES --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0.5rem 0;
+    }
 
+    .logo-container {
+        justify-content: center;
+        margin: 0.3rem 0;
+    }
 
-header ul {
-    width: 100%;
-    justify-content: space-evenly;
-}
+    header nav ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        background-color: #1C1C1C;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
 
-main {
-margin: 5% 0% 5% 0%;
+    header nav ul li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
 
-}
+    header nav a {
+        display: block;
+        font-size: 0.9rem;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
 
-.primer-parrafo, .segundo-parrafo {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
-}
+    .primer-parrafo {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
 
-.primer-parrafo iframe {
-    width: 100%;
-    height: 50vh;
+    .primer-parrafo iframe {
+        height: 180px;
+        margin-bottom: 10px;
+    }
 
-}
+    .primer-parrafo div {
+        width: 100%;
+        padding: 0 5px;
+    }
 
-.grillas {
-    grid-template-areas: 
-    "f0to1"
-    "f0to2"
-    "f0to3"
-    "f0to4"
-    "f0to5"
-    "f0to6";
-    grid-template-columns: 1fr;
-}
+    .primer-parrafo p {
+        font-size: 0.9rem;
+    }
 
-footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    
-}
+    .segundo-parrafo {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
 
+    .segundo-parrafo p {
+        font-size: 0.9rem;
+    }
+
+    .segundo-parrafo img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .grid-container1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "foto5";
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img {
+        height: 150px;
+    }
+
+    h3 {
+        width: 80%;
+        margin: 10px auto;
+        font-size: 1.2rem;
+    }
+
+    .mapafooter {
+        width: 100%;
+        height: 150px;
+        margin: 10px 0;
+    }
+
+    .sponsors {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+
+    .sponsors img {
+        height: 4vh;
+    }
+
+    .redes img {
+        height: 4vh;
+    }
+
+    .redes {
+        gap: 5px;
+        margin: 0.5rem 0;
+    }
 }

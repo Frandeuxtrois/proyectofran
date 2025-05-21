@@ -122,7 +122,6 @@ h3 {
 
 .grid-container1 {
     display: grid;
-    border: 1px solid red;
     justify-content: center;
     grid-template-columns: 0.7fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -244,7 +243,6 @@ footer a {
     text-align: center;
     width: 80%;
     margin: 0% 10% 0 10%;
-    border: 1px solid red;
 }
 
 .negrita {
@@ -256,7 +254,7 @@ footer a {
     text-shadow: 0px 0px 19px rgba(0,0,0,0.6);
 }
 
-/* HTML INSCRIPCION.. estara bien hacer los styles.css sobre el mismo css que el index? */
+/* HTML INSCRIPCION */
 
 .inscripcion {
     display: grid;
@@ -282,8 +280,6 @@ footer a {
     margin-left: 40px;
 }
 
-
-/* estara bien hacer el form aparte? si ya esta dividido por un /div */
 .formulario form {
     display: flex;
     flex-direction: column;
@@ -298,12 +294,12 @@ footer a {
     border-radius: 5px;
     align-items: center;
     color: #F5F5F5;
-    width: 100vh;
-    height: 110vh;
-    text-shadow: 20px black;
-    padding: 5% 0% 0% 0%;
+    width: 100%;
+    padding: 2rem 1rem;
     background-color: #3A3A3A;
+    border-radius: 5px;
     gap: 30px;
+
 }
 
 .textoFormulario h2 {
@@ -325,136 +321,82 @@ justify-content: end;
 
 /* HTML CONTACTOS */
 
-/* --- TABLETS --- */
-
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        background-size: 140%;
-        background-position: center;
-    }
-
-    .menu-desplegable {
-        align-self: flex-end;
-        margin-right: 10px;
-        padding: 0;
-    }
-
-    .logo-container {
-        justify-content: center;
-        margin: 0.5rem 0;
-    }
-
-    header nav ul {
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        background-color: #1C1C1C;
-        padding: 0;
-        margin: 0;
-        gap: 50px;
-        background-color: black;
-    }
-    
-    header nav ul li {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    header nav a {
-        display: flex;
-        gap: 2vh;
-        font-size: 0.9rem;
-    }
-
-    .primer-parrafo {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .primer-parrafo iframe {
-        height: 200px; /* para que no quede muy alto */
-        margin-bottom: 10px;
-    }
-
-    .primer-parrafo div {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .segundo-parrafo {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .segundo-parrafo img {
-        height: auto;
-        max-width: 90%;
-        margin-top: 10px;
-    }
-
-    .grid-container1 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "foto1 foto2"
-            "foto1 foto3"
-            "foto4 foto5";
-        height: auto;
-        margin: 1rem 0;
-    }
-
-    .foto2 img, .foto3 img, .foto4 img, .foto5 img {
-        height: 150px;
-    }
-
-    h3 {
-        width: 40%;
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    footer {
-        display: flex;
-        
-    }
-
-    .mapafooter {
-        display: none;
-    }
-
-    .sponsors {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .sponsors img {
-        height: 3vh;
-    }
-
-    .redes {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .redes p {
-        display: none;
-    }
-    .redes img {
-        display: flex;
-        height: 5vh;
-        gap: 2px;
-        flex-direction: row;
-    }
+.formulariopages {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #CCCCCC;
+    gap: 10px;
+    background-color: #3A3A3A;
+    border-radius: 5px;
+    padding: 1rem;
 }
 
-/* --- CELULARES --- */
+.mapacontactos {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    background-color: #3A3A3A;
+    padding: 10px;
+}
+
+/* HTML ENTRADAS */
+
+.entradas {
+display: flex;
+flex-direction: row;
+}
+
+.textoentradasform {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    color: #CCCCCC;
+    padding: 50px;
+    margin: 10px;
+    background-color: #3A3A3A;
+}
+.entradasformulario {
+    margin: 10px;
+    background-color: #3A3A3A;
+    border-radius: 5px;
+    color: #CCCCCC;
+    padding: 10px;
+}
+
+.entradasformulario p {
+display: flex;
+text-align: center;
+}
+
+/* HTML CAMPEONES */
+
+.tablacampeones {
+    display: flex;
+    justify-content: center;
+}
+
+.tablacampeones th {
+    padding: 5px;
+}
+
+.carrousel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.carrousel img {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    width: auto;
+    height: 30rem;
+}
+/* CELULARES */
 
 @media (max-width: 600px) {
     header {
@@ -472,16 +414,15 @@ justify-content: end;
 
     header nav ul {
         flex-direction: row;
-        width: 100%;
+        height: auto;
         justify-content: center;
         padding: 0;
         margin: 0;
-        gap: 10px;
+        gap: 3.9vh;
         background-color: black;
     }
 
     header nav ul li {
-        width: 100%;
         margin: 0;
         padding: 0;
         gap: 0;
@@ -508,7 +449,7 @@ justify-content: end;
 
     .primer-parrafo div {
         width: 100%;
-        padding: 0 5px;
+        padding: 0px 5px 0px 0px;
     }
 
     .primer-parrafo p {
@@ -541,11 +482,14 @@ justify-content: end;
             "foto4"
             "foto5";
         height: auto;
-        margin: 1rem 0;
+        margin: 1rem;
+
     }
 
     .foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img {
+        width: 20rem;
         height: 150px;
+        margin-left: 2rem;
     }
 
     h3 {
@@ -566,11 +510,12 @@ justify-content: end;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+        width: 50%;
         padding-bottom: 15px;
+        margin: 5px;
     }
 
     .sponsors img {
-
         height: 3vh;
     }
 
@@ -584,5 +529,45 @@ justify-content: end;
     }
     .redes img {
         height: 4vh;
+    }
+
+
+    /* HTML INSCRIBIRSE */
+
+     .inscripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .formulario {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        margin: 0;
+    }
+
+    .textoFormulario {
+        width: 100%;
+    }
+
+    .textoFormulario ul,
+    .textoFormulario ol {
+        width: 100%;
+        padding-left: 1.2rem;
+    }
+
+    /* HTML ENTRADAS */
+
+    .entradas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textoentradasform {
+        width: 95%;
     }
 }

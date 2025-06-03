@@ -1,0 +1,18 @@
+@use "variables";
+@use "mixins";
+.formulariopages {
+    @extend %areagris;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    color: variables.$blancotit;
+    gap: 10px;
+}
+
+.mapacontactos {
+    @extend %areagris;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}

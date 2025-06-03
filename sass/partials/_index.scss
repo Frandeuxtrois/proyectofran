@@ -1,0 +1,184 @@
+@use "variables";
+@use "mixins";
+/*HTML INDEX */
+body {
+    font-family: 'lato';
+    background-size:cover;
+
+    h1, h2 {
+    color: variables.$rojofr;
+
+}
+    h3 {
+    @extend %areagris;
+    display: flex;
+    justify-content: center;
+    color: variables.$rojofr;
+    width: 30%;
+    margin-left: 4vh;
+  }
+}
+
+
+.primer-parrafo {
+    @extend %areagris;
+    display: flex;
+    align-items:top;
+    flex-direction: row;
+    height: 60vh;
+    justify-content:space-between;
+    background-size:contain;
+    gap: 1.5%;
+    margin: 2%;
+
+    div {
+    width: 100%;
+
+        p {
+        align-items: center;
+        color: variables.$blancotit;
+    }
+  }
+}
+
+.segundo-parrafo {
+    @extend %areagris;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5%;
+    text-align: end;
+    background-size:contain;
+    margin: 2%;
+
+    p {
+     color: variables.$blancotit;
+
+        img {
+        display: flex;
+        height: 100%;
+        margin-top: 0.5%;
+        }
+    }
+}
+/* INDEX GRID */
+
+
+.grid-container1 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "foto1 foto2 foto3"
+    "foto1 foto4 foto5";
+    gap: 10px;
+    margin: 2%;
+    height: 62vh;
+
+@each $num in 1, 2, 3, 4, 5 {
+    .foto#{$num} {
+      grid-area: foto#{$num};
+    }
+  }
+
+    img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    }
+.foto2 img, .foto3 img, .foto4 img, .foto5 img {
+    height: 30vh;
+    }
+}
+
+/* INDEX GRID FIN */
+
+.h1paginas {
+    margin: 0.5%;
+    color: variables.$rojofr;
+}
+
+
+.paginas-principal {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0% 10% 0 10%;
+}
+
+.negrita {
+    display: flex;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: flex-end;
+    margin: 1vh;
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.6);
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .primer-parrafo {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .primer-parrafo iframe {
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    .primer-parrafo div {
+        width: 100%;
+        padding: 0px 5px 0px 0px;
+    }
+
+    .primer-parrafo p {
+        font-size: 0.9rem;
+    }
+
+    .segundo-parrafo {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .segundo-parrafo p {
+        font-size: 0.9rem;
+    }
+
+    .segundo-parrafo img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .grid-container1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "foto5";
+        height: auto;
+        margin: 1rem;
+
+    }
+
+    .foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img {
+        width: 20rem;
+        height: 150px;
+        margin-left: 2rem;
+    }
+
+    h3 {
+        width: 80%;
+        margin: 10px auto;
+        font-size: 1.2rem;
+    }
+}

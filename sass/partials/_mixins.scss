@@ -1,0 +1,7 @@
+@use "variables";
+
+%areagris {
+    background-color: variables.$grisace;
+    border-radius: 5px;
+    padding: 10px;
+}

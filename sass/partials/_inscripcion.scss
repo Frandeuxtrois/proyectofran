@@ -1,0 +1,88 @@
+@use "variables";
+@use "mixins";
+.inscripcion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "formulario textoFormulario";
+    gap: 10px;
+    margin: 30px;
+    padding: 10px;
+
+    .formulario {
+    @extend %areagris;
+     display: flex;
+     grid-area: formulario;
+     flex-direction: column;
+     align-items: center;
+     width: 80vh;
+     height: 90vh;
+     gap: 10px;
+     margin-left: 40px;
+
+    form {
+     display: flex;
+     flex-direction: column;
+     width: 70%;
+     color: variables.$blancotit;
+     gap: 10px;
+    }
+  }
+
+.textoFormulario {
+  @extend %areagris;
+    display: flex;
+    grid-area: textoFormulario;
+    flex-direction: column;
+    align-items: center;
+    color: variables.$blancotit;
+    width: 100%;
+
+    gap: 30px;
+
+    h2 {
+    color: variables.$rojofr;
+    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 60%;
+    }
+
+    ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+     }
+   } 
+ }
+
+@media (max-width: 600px) {
+    .inscripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+
+    .formulario {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        margin: 0;
+    }
+  
+    .textoFormulario {
+        width: 100%;
+
+    ul, ol {
+        width: 100%;
+        padding-left: 1.2rem;
+     }
+   }
+ }
+}

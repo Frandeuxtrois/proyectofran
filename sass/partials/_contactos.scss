@@ -18,3 +18,22 @@
   justify-content: center;
   align-items: center;
 }
+
+  @media (max-width: 400px) {
+
+.mapacontactos {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  iframe, img, .mapa {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+  } 

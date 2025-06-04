@@ -399,6 +399,22 @@ body h3 {
   align-items: center;
 }
 
+@media (max-width: 400px) {
+  .mapacontactos {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .mapacontactos iframe, .mapacontactos img, .mapacontactos .mapa {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
 .entradas {
   display: flex;
   flex-direction: row;
@@ -517,14 +533,31 @@ body h3 {
 
 .carrousel {
   display: flex;
-  width: 30rem;
-  object-fit: cover;
-  margin: auto;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 680px;
+  padding: 10px;
 }
 .carrousel img {
-  height: 30rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .tablacampeones {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .carrousel {
+    max-width: 100%;
+  }
+  .carrousel img {
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

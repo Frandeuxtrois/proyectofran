@@ -12,13 +12,32 @@
 }
 .carrousel {
   display: flex;
-  width: 30rem;
-  object-fit: cover;
-  margin: auto;
   justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 680px;
+  padding: 10px;
 
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .tablacampeones {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .carrousel {
+    max-width: 100%;
+    
     img {
-    height: 30rem;
-  object-fit: cover;
+      height: auto;
     }
+  }
 }

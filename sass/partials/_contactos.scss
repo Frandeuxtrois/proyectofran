@@ -12,7 +12,9 @@
 
 .mapacontactos {
     @extend %areagris;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+  width: 60vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

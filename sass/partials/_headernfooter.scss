@@ -64,22 +64,21 @@ header {
    
 
     nav {
-        a {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        gap: 0;
-        }
+
         ul {
         flex-direction: row;
-        height: auto;
+        width: 100%;
         background-color: black;
     
         li {
         margin: 0;
         padding: 0;
         gap: 0;
-        width: 10.4vh;
+        width: 20vw;
+
+        a {
+            font-size: small;
+        }
      }
     }
    }
@@ -129,17 +128,52 @@ footer {
   }
 
 .sponsors {
-    display: flex;
-    position: relative;
-    gap: 10px;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  position: relative;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
 
-    img {
-        height: 6vh;
+  img {
+    height: 6vh;
+    border-radius: 4px;
+
+    @keyframes grow-shadow {
+      0% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+      100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+      }
+    }
+
+    @keyframes shrink-shadow {
+      0% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      animation: grow-shadow 0.3s forwards ease-out;
+    }
+
+    &:not(:hover) {
+      animation: shrink-shadow 0.3s forwards ease-out;
     }
   }
 }
+ }
+
+//
+
+
 .redes {
     display: flex;  
     flex-direction: row;
@@ -150,6 +184,37 @@ footer {
 
     img {
     height: 7vh;
+    @keyframes redes-grow-shadow {
+      0% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+      100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+      }
+    }
+
+    @keyframes redes-shrink-shadow {
+      0% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      animation: grow-shadow 0.3s forwards ease-out;
+    border-radius: 90%;
+    }
+
+    &:not(:hover) {
+      animation: shrink-shadow 0.3s forwards ease-out;
+    border-radius: 90%;
+    }   
     }
 }
 

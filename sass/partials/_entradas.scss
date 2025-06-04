@@ -20,11 +20,14 @@ flex-direction: row;
     @extend %areagris;
     margin: 10px;
     color: variables.$blancotit;
-
-    .entradasformulario p {
-    display: flex;
-    text-align: center;
-    }
+        .textocompra {
+        ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        text-align: center;
+        }
+        }
 }
 
 @media (max-width: 600px) {

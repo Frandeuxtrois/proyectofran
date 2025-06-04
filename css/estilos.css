@@ -57,22 +57,19 @@ header nav ul a:hover {
     background-size: 180%;
     background-position: center;
   }
-  header nav a {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 0;
-  }
   header nav ul {
     flex-direction: row;
-    height: auto;
+    width: 100%;
     background-color: black;
   }
   header nav ul li {
     margin: 0;
     padding: 0;
     gap: 0;
-    width: 10.4vh;
+    width: 20vw;
+  }
+  header nav ul li a {
+    font-size: small;
   }
 }
 footer {
@@ -120,6 +117,33 @@ footer p a {
 }
 .imagefooter .sponsors img {
   height: 6vh;
+  border-radius: 4px;
+}
+@keyframes grow-shadow {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(215, 38, 56);
+  }
+}
+@keyframes shrink-shadow {
+  0% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(215, 38, 56);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+.imagefooter .sponsors img:hover {
+  animation: grow-shadow 0.3s forwards ease-out;
+}
+.imagefooter .sponsors img:not(:hover) {
+  animation: shrink-shadow 0.3s forwards ease-out;
 }
 
 .redes {
@@ -132,6 +156,34 @@ footer p a {
 }
 .redes img {
   height: 7vh;
+}
+@keyframes redes-grow-shadow {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(215, 38, 56);
+  }
+}
+@keyframes redes-shrink-shadow {
+  0% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(215, 38, 56);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+.redes img:hover {
+  animation: grow-shadow 0.3s forwards ease-out;
+  border-radius: 90%;
+}
+.redes img:not(:hover) {
+  animation: shrink-shadow 0.3s forwards ease-out;
+  border-radius: 90%;
 }
 
 @media (max-width: 600px) {
@@ -253,6 +305,7 @@ body h3 {
   border-radius: 8px;
 }
 .grid-container1 .foto2 img, .grid-container1 .foto3 img, .grid-container1 .foto4 img, .grid-container1 .foto5 img {
+  object-fit: cover;
   height: 30vh;
 }
 
@@ -339,9 +392,11 @@ body h3 {
 }
 
 .mapacontactos {
+  width: 60vw;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
-  margin: 10px;
+  align-items: center;
 }
 
 .entradas {
@@ -362,8 +417,10 @@ body h3 {
   margin: 10px;
   color: #F5F5F5;
 }
-.entradasformulario .entradasformulario p {
+.entradasformulario .textocompra ul {
   display: flex;
+  list-style-type: none;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -449,7 +506,10 @@ body h3 {
 }
 .tablacampeones {
   display: flex;
+  width: 50%;
   justify-content: center;
+  margin: auto;
+  padding: 10px;
 }
 .tablacampeones th {
   padding: 5px;
@@ -457,15 +517,14 @@ body h3 {
 
 .carrousel {
   display: flex;
-  width: 100%;
+  width: 30rem;
+  object-fit: cover;
+  margin: auto;
   justify-content: center;
 }
 .carrousel img {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  width: auto;
   height: 30rem;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=estilos.css.map */

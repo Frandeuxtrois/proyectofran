@@ -5,3 +5,14 @@
     border-radius: 5px;
     padding: 10px;
 }
+
+@mixin entradasgrid {
+  background-color: variables.$grisace;
+  padding: 10px;
+  border-radius: 5px;
+  color: variables.$blancotit;
+
+  h3 {
+    color: variables.$rojofr;
+  }
+}

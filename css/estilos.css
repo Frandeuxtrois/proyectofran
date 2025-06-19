@@ -275,14 +275,13 @@ footer p a {
     flex-direction: row;
   }
   .imagefooter .mapafooter {
-    margin: 1vh 0 0 1vh;
-    width: 300px;
+    display: none;
   }
   .imagefooter .sponsors {
     display: flex;
     position: relative;
     gap: 10px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
   .imagefooter .sponsors img {

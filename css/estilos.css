@@ -44,10 +44,10 @@ header nav ul a:hover {
   margin: 1%;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .dropdown {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
   }
   header {
     display: flex;
@@ -70,6 +70,33 @@ header nav ul a:hover {
   }
   header nav ul li a {
     font-size: small;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    background-size: 120%;
+    background-position: center;
+    gap: 8px;
+  }
+  header nav ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    background-color: black;
+  }
+  header nav ul li {
+    width: auto;
+    padding: 0;
+  }
+  header nav ul li a {
+    font-size: small;
+    padding: 6px 10px;
+  }
+  .logo {
+    max-width: 120px;
+    margin: 2% auto;
   }
 }
 footer {
@@ -186,7 +213,7 @@ footer p a {
   border-radius: 90%;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
   footer {
     flex-direction: column;
   }
@@ -215,7 +242,120 @@ footer p a {
     height: 4vh;
   }
 }
-.inscripcion .formulario, .inscripcion .textoFormulario, .entradas .textoentradasform, .entradasformulario, .formulariopages, .mapacontactos, body h3, .primer-parrafo, .segundo-parrafo {
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1C1C1C;
+  }
+  footer p {
+    display: flex;
+    color: #3A3A3A;
+    text-align: center;
+    font-size: small;
+    justify-content: center;
+    text-shadow: 0px 0px 19px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+  }
+  footer p a {
+    display: flex;
+    flex-direction: row;
+    width: 3.4%;
+    justify-content: center;
+    padding-top: 5px;
+  }
+  .imagefooter {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .imagefooter .mapafooter {
+    margin: 1vh 0 0 1vh;
+    width: 300px;
+  }
+  .imagefooter .sponsors {
+    display: flex;
+    position: relative;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .imagefooter .sponsors img {
+    height: 6vh;
+    border-radius: 4px;
+  }
+  @keyframes grow-shadow {
+    0% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+    100% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgb(215, 38, 56);
+    }
+  }
+  @keyframes shrink-shadow {
+    0% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgb(215, 38, 56);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+  .imagefooter .sponsors img:hover {
+    animation: grow-shadow 0.3s forwards ease-out;
+  }
+  .imagefooter .sponsors img:not(:hover) {
+    animation: shrink-shadow 0.3s forwards ease-out;
+  }
+  .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    margin: 1%;
+    justify-content: space-around;
+  }
+  .redes img {
+    height: 7vh;
+  }
+  @keyframes redes-grow-shadow {
+    0% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+    100% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgb(215, 38, 56);
+    }
+  }
+  @keyframes redes-shrink-shadow {
+    0% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgb(215, 38, 56);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+  .redes img:hover {
+    animation: redes-grow-shadow 0.3s forwards ease-out;
+    border-radius: 90%;
+  }
+  .redes img:not(:hover) {
+    animation: redes-shrink-shadow 0.3s forwards ease-out;
+    border-radius: 90%;
+  }
+}
+.paginas-principal, .inscripcion .formulario, .inscripcion .textoFormulario, .entradas .textoentradasform, .entradasformulario, .formulariopages, .mapacontactos, body h3, .primer-parrafo, .segundo-parrafo {
   background-color: #3A3A3A;
   border-radius: 5px;
   padding: 10px;
@@ -333,8 +473,7 @@ body h3 {
   text-shadow: 0px 0px 19px rgba(0, 0, 0, 0.6);
 }
 
-/* CELULARES */
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .primer-parrafo {
     flex-direction: column;
     height: auto;
@@ -382,11 +521,76 @@ body h3 {
     font-size: 1.2rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .primer-parrafo {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 1rem;
+  }
+  .primer-parrafo div {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .primer-parrafo p {
+    font-size: 1rem;
+  }
+  .primer-parrafo iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .segundo-parrafo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 1rem;
+  }
+  .segundo-parrafo p {
+    font-size: 1rem;
+  }
+  .segundo-parrafo img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .grid-container1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5";
+    height: auto;
+    margin: 1rem;
+  }
+  .grid-container1 img {
+    width: 100%;
+    height: auto;
+  }
+  .foto2 img,
+  .foto3 img,
+  .foto4 img,
+  .foto5 img {
+    object-fit: cover;
+    height: 250px;
+  }
+  h3 {
+    width: 70%;
+    margin: 1rem auto;
+    font-size: 1.4rem;
+  }
+  .negrita {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  .paginas-principal {
+    width: 90%;
+    margin: auto;
+  }
+}
 .formulariopages {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 5px auto;
   color: #F5F5F5;
   gap: 10px;
 }
@@ -413,6 +617,39 @@ body h3 {
     width: 100%;
     max-width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .mapacontactos {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .mapacontactos iframe, .mapacontactos img, .mapacontactos .mapa {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .formulariopages {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #F5F5F5;
+    gap: 10px;
+  }
+  .mapacontactos {
+    width: 60vw;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .entradas {
@@ -486,6 +723,64 @@ body h3 {
     width: 5rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .entradas {
+    display: flex;
+    flex-direction: row;
+  }
+  .entradas .textoentradasform {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    color: #F5F5F5;
+    margin: 10px;
+    flex-direction: column;
+  }
+  .entradas .fechas {
+    margin: 2rem;
+    text-align: center;
+  }
+  .entradas .fechas h2 {
+    color: #D72638;
+  }
+  .entradas .fechas .fechasgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .entradas .fechas .fechasgrid .evento {
+    background-color: #3A3A3A;
+    padding: 10px;
+    border-radius: 5px;
+    color: #F5F5F5;
+    animation: fadeIn 0.8s ease forwards;
+  }
+  .entradas .fechas .fechasgrid .evento h3 {
+    color: #D72638;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .entradasformulario {
+    margin: 10px;
+    color: #F5F5F5;
+  }
+  .entradasformulario .textocompra ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .inscripcion {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -497,7 +792,6 @@ body h3 {
 }
 .inscripcion .formulario {
   display: flex;
-  grid-area: formulario;
   flex-direction: column;
   align-items: center;
   width: 80vh;
@@ -536,7 +830,7 @@ body h3 {
   justify-content: end;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .inscripcion {
     display: flex;
     flex-direction: column;
@@ -559,6 +853,52 @@ body h3 {
     padding-left: 1.2rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .inscripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .inscripcion .formulario {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: start;
+    margin: 0;
+  }
+  .inscripcion .formulario form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #F5F5F5;
+    gap: 10px;
+  }
+  .inscripcion .textoFormulario {
+    display: flex;
+    grid-area: textoFormulario;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F5F5;
+    width: 100%;
+    gap: 30px;
+  }
+  .inscripcion .textoFormulario h2 {
+    color: #D72638;
+  }
+  .inscripcion .textoFormulario ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 60%;
+  }
+  .inscripcion .textoFormulario ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
 .tablacampeones {
   display: flex;
   width: 50%;
@@ -568,6 +908,11 @@ body h3 {
 }
 .tablacampeones th {
   padding: 5px;
+}
+
+.paginas-principal {
+  margin-top: 5px;
+  color: #F5F5F5;
 }
 
 .carrousel {
@@ -586,7 +931,7 @@ body h3 {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 600px) {
   .tablacampeones {
     flex-direction: column;
     padding: 5px;
@@ -596,6 +941,33 @@ body h3 {
   }
   .carrousel img {
     height: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tablacampeones {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+  }
+  .tablacampeones th {
+    padding: 5px;
+  }
+  .carrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 680px;
+    padding: 10px;
+  }
+  .carrousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
   }
 }
 

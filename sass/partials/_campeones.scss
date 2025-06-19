@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins.scss";
 
 .tablacampeones {
     display: flex;
@@ -10,6 +11,13 @@
     padding: 5px;
   }
 }
+
+.paginas-principal {
+@extend %areagris;
+margin-top: 5px;
+color: variables.$blancotit;
+}
+
 .carrousel {
   display: flex;
   justify-content: center;
@@ -27,7 +35,11 @@
   }
 }
 
-@media (max-width: 768px) {
+//Media 
+
+// Celular
+
+@media (min-width: 0px) and (max-width: 600px) {
   .tablacampeones {
     flex-direction: column;
     padding: 5px;
@@ -38,6 +50,39 @@
     
     img {
       height: auto;
+    }
+  }
+}
+
+// Tablet
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tablacampeones {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+
+    th {
+      padding: 5px;
+    }
+  }
+
+  .carrousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 680px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
   }
 }

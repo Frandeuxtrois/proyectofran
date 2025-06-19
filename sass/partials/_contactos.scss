@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 5px auto;
     color: variables.$blancotit;
     gap: 10px;
 }
@@ -37,3 +37,47 @@
   }
 }
   } 
+
+//Media 
+
+// Celular
+
+@media (max-width: 400px) {
+  .mapacontactos {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    iframe, img, .mapa {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+//Tablet
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    
+  .formulariopages {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    color: variables.$blancotit;
+    gap: 10px;
+  }
+
+  .mapacontactos {
+    width: 60vw;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

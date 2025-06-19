@@ -1,5 +1,6 @@
 @use "variables";
 @use "mixins";
+
 .inscripcion {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,7 +14,6 @@
     .formulario {
     @extend %areagris;
      display: flex;
-     grid-area: formulario;
      flex-direction: column;
      align-items: center;
      width: 80vh;
@@ -58,8 +58,11 @@
      }
    } 
  }
+// MEDIA
 
-@media (max-width: 600px) {
+//Celular
+
+@media (min-width: 0px) and (max-width: 600px) {
     .inscripcion {
         display: flex;
         flex-direction: column;
@@ -84,4 +87,59 @@
      }
    }
  }
+}
+
+// Tablet
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .inscripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem;
+
+    .formulario {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        margin: 0;
+        
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: variables.$blancotit;
+        gap: 10px;
+      }
+    }
+
+    .textoFormulario {
+      display: flex;
+      grid-area: textoFormulario;
+      flex-direction: column;
+      align-items: center;
+      color: variables.$blancotit;
+      width: 100%;
+      gap: 30px;
+
+      h2 {
+        color: variables.$rojofr;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 60%;
+      }
+
+      ol {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+    }
+  }
 }

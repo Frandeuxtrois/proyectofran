@@ -46,12 +46,14 @@ header {
     margin: 1%;
  }
 
-//media header
+// Media Header
 
-@media (max-width: 600px) {
+// Celular
+
+@media (min-width: 0px) and (max-width: 600px) {
     .dropdown {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
     }
     
     header {
@@ -62,9 +64,7 @@ header {
     background-size: 180%;
     background-position:center;
    
-
     nav {
-
         ul {
         flex-direction: row;
         width: 100%;
@@ -85,8 +85,42 @@ header {
   } 
  }
 
+// Tablets
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    background-size: 120%;
+    background-position: center;
+    gap: 8px;
 
-//footer
+    nav {
+      ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        background-color: black;
+
+        li {
+          width: auto;
+          padding: 0;
+
+          a {
+            font-size: small;
+            padding: 6px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    max-width: 120px;
+    margin: 2% auto;
+  }
+}
+
+// Footer
 
 footer {
     display: flex;
@@ -171,9 +205,6 @@ footer {
 }
  }
 
-//
-
-
 .redes {
     display: flex;  
     flex-direction: row;
@@ -218,10 +249,11 @@ footer {
     }
 }
 
-
 //Media Footer
 
-@media (max-width: 600px) {
+// Celular
+
+@media (min-width: 0px) and (max-width: 600px) {
 
 footer {
     flex-direction: column;
@@ -256,4 +288,135 @@ footer {
     }
   }
  }
+}
+// Tablets
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1C1C1C;
+
+    p {
+      display: flex;
+      color: #3A3A3A;
+      text-align: center;
+      font-size: small;
+      justify-content: center;
+      text-shadow: 0px 0px 19px rgba(0,0,0,0.6);
+      margin-bottom: 0;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        width: 3.4%;
+        justify-content: center;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .imagefooter {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .mapafooter {
+      margin: 1vh 0 0 1vh;
+      width: 300px;
+    }
+
+    .sponsors {
+      display: flex;
+      position: relative;
+      gap: 10px;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        height: 6vh;
+        border-radius: 4px;
+
+        @keyframes grow-shadow {
+          0% {
+            transform: scale(1);
+            box-shadow: none;
+          }
+          100% {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+          }
+        }
+
+        @keyframes shrink-shadow {
+          0% {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+          }
+          100% {
+            transform: scale(1);
+            box-shadow: none;
+          }
+        }
+
+        &:hover {
+          animation: grow-shadow 0.3s forwards ease-out;
+        }
+
+        &:not(:hover) {
+          animation: shrink-shadow 0.3s forwards ease-out;
+        }
+      }
+    }
+  }
+
+  .redes {
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    margin: 1%;
+    justify-content: space-around;
+
+    img {
+      height: 7vh;
+
+      @keyframes redes-grow-shadow {
+        0% {
+          transform: scale(1);
+          box-shadow: none;
+        }
+        100% {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+        }
+      }
+
+      @keyframes redes-shrink-shadow {
+        0% {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(215, 38, 56, 1);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: none;
+        }
+      }
+
+      &:hover {
+        animation: redes-grow-shadow 0.3s forwards ease-out;
+        border-radius: 90%;
+      }
+
+      &:not(:hover) {
+        animation: redes-shrink-shadow 0.3s forwards ease-out;
+        border-radius: 90%;
+      }   
+    }
+  }
 }
